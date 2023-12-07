@@ -123,7 +123,7 @@ int main() {
     cv::imshow("Image",image);
     cv::waitKey(0);
     */
-    /*
+
     // operation of pixels
     cv::Mat image_boldt=cv::imread("./data/boldt.jpg");
     salt(image_boldt,2000);
@@ -139,7 +139,7 @@ int main() {
     img_test(50,100)[2]=17;
     cv::imshow("mat_ image",img_test);
     cv::waitKey(0);
-    */
+
 
     // reduce the color
 
