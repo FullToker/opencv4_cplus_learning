@@ -1,0 +1,3 @@
+/Users/fengys/Desktop/C++/opencv_chp1/CMakeFiles/opencv_chp1.dir
+/Users/fengys/Desktop/C++/opencv_chp1/CMakeFiles/edit_cache.dir
+/Users/fengys/Desktop/C++/opencv_chp1/CMakeFiles/rebuild_cache.dir
