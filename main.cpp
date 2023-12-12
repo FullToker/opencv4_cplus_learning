@@ -47,8 +47,22 @@ void pepper(cv::Mat image, int n){
         }
     }
 }
+
+//reduce the color
 void colorReduce(cv::Mat image, int div=64){
-    
+
+}
+
+//make images sharpened
+void sharpen(cv::Mat &image, cv::Mat &result){
+    result.create(image.size(),image.type());
+    int nchannels=image.channels(); //获得通道数
+
+    //除去第一行和最后一行
+    for(int j=1;j<image.rows-1;j++){
+        //uchar* previous =image.ptr<const char>(j-1);
+    }
+
 }
 
 int main() {
@@ -125,6 +139,7 @@ int main() {
     */
 
     // operation of pixels
+    /*
     cv::Mat image_boldt=cv::imread("./data/boldt.jpg");
     salt(image_boldt,2000);
     cv::imshow("salted image",image_boldt);
@@ -139,6 +154,9 @@ int main() {
     img_test(50,100)[2]=17;
     cv::imshow("mat_ image",img_test);
     cv::waitKey(0);
+     */
+
+
 
 
     // reduce the color
