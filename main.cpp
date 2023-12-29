@@ -157,10 +157,28 @@ int main() {
      */
 
 
+    //Filter
+    cv::Mat image = cv::imread("./data/boldt.jpg");
+    //cv::GaussianBlur(image,image,cv::Size(11,11),2.0);
+    cv::Mat reduced(image.rows/4,image.cols/4,CV_8U);
+    for(int i=0;i<reduced.rows;i++){
+        for(int j=0;j<reduced.cols;j++){
+            reduced.at<uchar>(i,j)=image.at<uchar>(i*4,j*4);
+        }
+    }
+    cv::imshow("Image_Original",image);
+    cv::imshow("Image_reduced",reduced);
+
+    cv::Mat reducedImg,upImg;
+    cv::pyrDown(image,reducedImg);
+    cv::pyrUp(image,upImg);
+    cv::imshow("Image_preduced",reducedImg);
+    cv::imshow("Image_pup",upImg);
 
 
-    // reduce the color
+    cv::resize(image,reducedImg,cv::Size(),0.5,0.5,cv::INTER_LINEAR);
+    cv::imshow("Image_rreduced",reducedImg);
 
-
+    cv::waitKey(0);
     return 0;
 }
